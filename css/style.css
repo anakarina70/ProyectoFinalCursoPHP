@@ -100,7 +100,9 @@ body{
 }
 
 /*MAIN*/
-
+main {
+    margin-bottom: 350px; 
+}
 .sectionPrincipal{
     height: 90vh;
     background:linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/banner-bg.jpg);
@@ -199,6 +201,34 @@ body{
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
 }
+.listadoImagenes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px; /* Espacio interno alrededor del contenedor de las imágenes */
+    margin-top: 20px; ;
+}
+
+.peliculaItem {
+    width: 200px; /* Ancho de cada elemento de la galería */
+    height: auto; /* Altura ajustable según el contenido */
+    border-radius: 10px;
+    overflow: hidden; /* Para recortar las imágenes que se desborden del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para cada elemento */
+}
+
+.imgPelicula {
+    width: 100%; /* Ajustar la imagen al 100% del contenedor */
+    height: auto; /* Altura ajustable según el ancho */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para el efecto hover */
+}
+
+.imgPelicula:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse sobre la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
+
 
 /*FOOTER*/
 .footer{
@@ -276,6 +306,7 @@ body{
         height: initial;
         padding-top:15px;
         padding-bottom: 20px;
+        margin-top: 20px;
     }
     .listaNav{
         flex-direction: column;
