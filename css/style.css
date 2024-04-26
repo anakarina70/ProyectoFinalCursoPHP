@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --color-primario: #9f3647;
-    --color-secundario: rgb(23, 23, 23);
-    --color-terciario: #ffffff;
+    --color-primario: #ffffff;
+    --color-secundario: #f0f0f0;
+    --color-terciario: #000000;
 }
 
 *{
@@ -26,7 +26,7 @@
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--color-secundario));
+    background: var(--color-secundario);
 }
    
 /* Handle */
@@ -36,17 +36,17 @@
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background:var(--color-primario);
+    background: var(--color-primario);
 }
 body{
-    background-color: #181419;
-    color:var(--color-terciario); 
+    background-color: #f0f0f0;
+    color: var(--color-terciario); 
 }
 
 /*HEADER*/
 .header{
     background-color: var(--color-primario);
-    color:var(--color-terciario);
+    color: var(--color-terciario);
     height: 10vh;
     position:sticky;
     top: 0;
@@ -114,7 +114,9 @@ body{
     text-align: center;
 }
 
-.tituloPrincipal{
+.tituloPrincipal, 
+.texto {
+        color: white;
     font-size: 3rem;
     margin-bottom: 2rem;
 }
@@ -284,5 +286,3 @@ body{
         font-size: 1rem;
     }  
 }
-        
-    
