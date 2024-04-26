@@ -3,6 +3,7 @@
 :root {
     --color-primario: #9f3647;
     --color-secundario: rgb(23, 23, 23);
+    --color-terciario: #ffffff;
 }
 
 *{
@@ -25,7 +26,7 @@
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgb(23, 23, 23);
+    background: var(--color-secundario));
 }
    
 /* Handle */
@@ -39,13 +40,13 @@
 }
 body{
     background-color: #181419;
-    color:white; 
+    color:var(--color-terciario); 
 }
 
 /*HEADER*/
 .header{
     background-color: var(--color-primario);
-    color:#ffffff;
+    color:var(--color-terciario);
     height: 10vh;
     position:sticky;
     top: 0;
@@ -63,7 +64,7 @@ body{
         
 .logo{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-terciario);
     font-weight: 700;
     font-size: 1.2rem;
     /*animacion hover*/
@@ -84,28 +85,135 @@ body{
                 
 .linkNav{
     text-decoration: none;
-    color:#ffffff;
+    color: var(--color-terciario);
     font-weight: 700;
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
     /* Agregar efecto de botón presionado */
         transition: transform 0.3s, box-shadow 0.3s;
         &:hover {
+            color: var(--color-secundario);
             transform: scale(0.95);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             border-radius: 5px;
         }
 }
-    
-.linkNav.iniciarSesion{
-    background-color: #181419;
-    color: white;
-    border-radius: 5px;
+
+/*MAIN*/
+
+.sectionPrincipal{
+    height: 90vh;
+    background:linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--color-terciario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloPrincipal{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.texto{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.boton{
+    text-decoration: none;
+    background-color: var(--color-primario);
+    color: var(--color-terciario);
+    padding: 1rem;
+    border-radius: 25px;
+    margin: 1rem;
     /* Agregar efecto de botón presionado */
     transition: transform 0.3s, box-shadow 0.3s;
     &:hover {
         background-color: var(--color-primario);
+        color: var(--color-secundario);
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
+}
+
+.buscadorPrincipal{
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+.subtituloBuscador{
+    font-size: 2rem;
+}
+
+.buscadorPeliculas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.inputBuscador{
+    color: var(--color-secundario);
+    margin: 10px 0px;
+    padding: 0px 15px;
+    width: 400px;
+    height: 50px;
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid white;
+    font-size: 1rem;
+}
+
+.peliculasFavoritas{
+    width: 100%;
+    background-color: var(--color-secundario);
+    text-align: center; 
+}
+
+.favoritas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:60px;
+    margin: 2rem 0;
+}
+
+.imgFavorita{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    &:hover {
+        transform: scale(1.20);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/*FOOTER*/
+.footer{
+    background-color:var(--color-primario);
+    color:var(--color-terciario);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flechaArriba{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: var(--color-terciario);
+    cursor: pointer;
 }
             
 
@@ -134,39 +242,34 @@ body{
         font-size: 1rem;
         padding: 0.2rem;    
     }
-}
-        
+
+    .tituloPrincipal{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
     
+    .texto{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
 
+    .subtituloBuscador{
+        font-size: 0.5rem;
+    }
 
-/*MAIN*/
+    .buscadorPrincipal{
+        height: 30vh;
+    }
 
-.principal{
-    height: 500px;
-}
+    .inputBuscador{
+        width: 200px;
+    }
 
+    .imgFavorita{
+        width: 100px;
+        height: 200px;
+    }
 
-
-/*FOOTER*/
-.footer{
-    background-color:var(--color-primario);
-    color:#ffffff;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flechaArriba{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    cursor: pointer;
-}
-
-/*FOOTER MOBILE*/
-@media (max-width: 768px) {
     .footer{
         height: initial;
         padding-top:15px;
@@ -181,3 +284,5 @@ body{
         font-size: 1rem;
     }  
 }
+        
+    
