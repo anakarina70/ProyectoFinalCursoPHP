@@ -294,23 +294,23 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  }
+}
   
-  .screen {   
+.screen {   
     background: linear-gradient(90deg, #9f3647, #9f3647);   
     position: relative; 
     height: 600px;
     width: 360px; 
     box-shadow: 0px 0px 24px #9f3647;
-  }
+}
   
-  .screen__content {
+.screen__content {
     z-index: 1;
     position: relative; 
     height: 100%;
-  }
+}
   
-  .screen__background {   
+.screen__background {   
     position: absolute;
     top: 0;
     left: 0;
@@ -319,14 +319,14 @@ body{
     z-index: 0;
     -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);  
-  }
+}
   
-  .screen__background__shape {
+.screen__background__shape {
     transform: rotate(45deg);
     position: absolute;
-  }
+}
   
-  .screen__background__shape1 {
+.screen__background__shape1 {
     height: 520px;
     width: 520px;
     background: #FFF; 
@@ -454,3 +454,50 @@ body{
   .social-login__icon:hover {
     transform: scale(1.5);  
   }
+
+  /* LISTADO PELICULAS*/
+
+  .sectionPeliculas{
+    background:linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/bg-register.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--color-terciario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloPeliculas{
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+  .listadoImagenes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px; /* Espacio interno alrededor del contenedor de las imágenes */
+    margin-top: 20px; ;
+}
+
+.peliculaItem {
+    width: 200px; /* Ancho de cada elemento de la galería */
+    height: auto; /* Altura ajustable según el contenido */
+    border-radius: 10px;
+    overflow: hidden; /* Para recortar las imágenes que se desborden del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para cada elemento */
+}
+
+.imgPelicula {
+    width: 100%; /* Ajustar la imagen al 100% del contenedor */
+    height: auto; /* Altura ajustable según el ancho */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para el efecto hover */
+}
+
+.imgPelicula:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse sobre la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
